@@ -98,6 +98,7 @@ namespace CasaDoCodigo
             }
 
             app.UseStaticFiles();
+            app.UseAuthentication();
             //INTEGRACAO 1) adicionar componente Identity
             //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade"
             //https://pt.wikipedia.org/wiki/Chain_of_Responsibility

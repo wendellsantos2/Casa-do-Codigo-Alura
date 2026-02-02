@@ -15,13 +15,22 @@ namespace CasaDoCodigo.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
+            builder.ConfigureServices((context, services) =>
+            {
                 services.AddDbContext<AppIdentityContext>(options =>
                     options.UseSqlite(
                         context.Configuration.GetConnectionString("AppIdentityContextConnection")));
 
-                services.AddDefaultIdentity<AppIdentityUser>()
-                    .AddEntityFrameworkStores<AppIdentityContext>();
+                services.AddDefaultIdentity<AppIdentityUser>(options =>
+                {
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireLowercase = true;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireDigit = false;
+                    options.Password.RequiredLength = 6;
+                })
+                .AddErrorDescriber<IdentityErrorDescriberPtBr>()
+                .AddEntityFrameworkStores<AppIdentityContext>();
             });
         }
     }
