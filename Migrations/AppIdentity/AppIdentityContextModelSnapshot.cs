@@ -14,7 +14,7 @@ namespace CasaDoCodigo.Migrations.AppIdentity
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
             modelBuilder.Entity("CasaDoCodigo.Areas.Identity.Data.AppIdentityUser", b =>
                 {
@@ -22,6 +22,12 @@ namespace CasaDoCodigo.Migrations.AppIdentity
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("AccessFailedCount");
+
+                    b.Property<string>("Bairro");
+
+                    b.Property<string>("CEP");
+
+                    b.Property<string>("Complemento");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
@@ -31,9 +37,15 @@ namespace CasaDoCodigo.Migrations.AppIdentity
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<string>("Endereco");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("Municipio");
+
+                    b.Property<string>("Nome");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256);
@@ -49,7 +61,11 @@ namespace CasaDoCodigo.Migrations.AppIdentity
 
                     b.Property<string>("SecurityStamp");
 
+                    b.Property<string>("Telefone");
+
                     b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UF");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
