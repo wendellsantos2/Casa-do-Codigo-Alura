@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CasaDoCodigo.Models
 {
-    //MELHORIA: 5) arquivo modelo.cs foi quebrado em v�rios arquivos
+    //MELHORIA: 5) arquivo modelo.cs foi quebrado em vários arquivos
     //veja o diagrama
     public class Pedido : BaseModel
     {
@@ -28,7 +28,7 @@ namespace CasaDoCodigo.Models
         [Required]
         public virtual Cadastro Cadastro { get; private set; }
 
-        [Required]
+        [NotMapped]
         public string ClienteId { get; set; }
 
     }

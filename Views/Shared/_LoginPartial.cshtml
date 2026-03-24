@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Identity
 @using CasaDoCodigo.Areas.Identity.Data
 @inject SignInManager<AppIdentityUser> SignInManager
 @inject UserManager<AppIdentityUser> UserManager
@@ -19,7 +19,7 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li><a asp-area="Identity" asp-page="/Account/Register">Novo Cadastro</a></li>
+        <li><a asp-area="Identity" asp-page="/Account/Register">Cadastro</a></li>
         <li><a asp-area="Identity" asp-page="/Account/Login">Entrar</a></li>
     </ul>
 }

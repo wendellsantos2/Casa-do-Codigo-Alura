@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CasaDoCodigo.MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2505cec2cd0776eef366df25cb9e70d7640a83bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+170264b8cfa8fa0d0d9f3bfb9741564308b95e19")]
 [assembly: System.Reflection.AssemblyProductAttribute("CasaDoCodigo.MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CasaDoCodigo.MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

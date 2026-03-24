@@ -1,4 +1,4 @@
-﻿using CasaDoCodigo.Areas.Identity.Data;
+using CasaDoCodigo.Areas.Identity.Data;
 using CasaDoCodigo.Migrations.AppIdentity;
 using CasaDoCodigo.Models;
 using Microsoft.AspNetCore.Http;
@@ -39,11 +39,13 @@ namespace CasaDoCodigo
 
         public void SetPedidoId(int pedidoId)
         {
-            contextAccessor.HttpContext.Session.SetInt32($"pedidoId_{clientId}");
+            string clientId = GetClienteId();
+            contextAccessor.HttpContext.Session.SetInt32($"pedidoId_{clientId}", pedidoId);
         }
 
         public void ResetPedidoId()
         {
+            string clientId = GetClienteId();
             contextAccessor.HttpContext.Session.Remove($"pedidoId_{clientId}");
         }
 
